@@ -19,7 +19,7 @@ filter.addEventListener('input', (e) => filterData(e.target.value))
 
 function filterData(searchText) {
   listItmes.forEach(item => {
-    if (item.innerText.includes(searchText)) {
+    if (item.innerText.toLowerCase().includes(searchText.toLowerCase())) {
       item.classList.remove('hide')
     } else {
       item.classList.add('hide')
